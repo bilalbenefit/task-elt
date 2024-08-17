@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: store
+    database: store
+    schema: public
+
+    tables:
+      - name: articles
+        columns:
+          - name: id
+            description: "Unique identifier for each articles"
+            tests:
+              - not_null
+              - unique
+          - name: updated_at
+            tests:
+              - not_null

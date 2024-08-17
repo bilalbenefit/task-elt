@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_articles
+    columns:
+      - name: article_id
+        tests:
+          - not_null
+          - unique
+      - name: updated_at
+        tests:
+          - not_null
